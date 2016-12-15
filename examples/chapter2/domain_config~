@@ -1,4 +1,0 @@
-kernel="testkernel"
-memory = 32
-name = "Simplest_Kernel"
-on_crash = 'destroy'
