@@ -9,11 +9,5 @@ grant_handle_t map(domid_t friend,unsigned int entry, void * shared_page,grant_h
 	/*PERFORM THE MAP*/
 	HYPERVISOR_grant_table_op(GNTTABOP_map_grant_ref,&op,1);
 	/*CHECK IF THE CODE WORKED*/
-	if(map_op.status!=GNTST_okay){
-		return -1;
-	}else{
-		/*RETURN THE HANDLE*/
-		*handle=map_op.handle;
-		return 0;
-	}
+	
 }
